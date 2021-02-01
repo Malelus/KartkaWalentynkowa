@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    -webkit-transition-duration: 0s !important;
+            transition-duration: 0s !important;
+    -webkit-transition-delay: 0s !important;
+            transition-delay: 0s !important;
+  }
+}
+
+body {
+  background: #dc8688;
+  color: #2e2a2f;
+  font-family: "Montserrat", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #dc8688;
+  margin: 0.08rem 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #b93639;
+  border: 3.25px solid #dc8688;
+  border-radius: 100px;
+}
+
+header {
+  padding: 2em 0;
+}
+
+.logo {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  -webkit-animation: logo-anim 2s ease;
+          animation: logo-anim 2s ease;
+}
+
+main {
+  margin: 1em 0;
+}
+
+.card-box {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+}
+
+.card-box .card {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5em;
+  -ms-grid-rows: (150px)[5];
+  -ms-grid-columns: (150px)[5];
+      grid-template: repeat(5, 150px)/repeat(5, 150px);
+      grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
+}
+
+.card-box .card__element {
+  position: relative;
+}
+
+.card-box .card__element__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.card-box .card__element__icon {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.card-box .card__element--ver {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.card-box .card__element--first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: first;
+  background: #d97c7e;
+}
+
+.card-box .card__element--second {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 5;
+  grid-area: second;
+  background: #d67274;
+}
+
+.card-box .card__element--third {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: third;
+  background: #d3686b;
+}
+
+.card-box .card__element--fourth {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  grid-area: fourth;
+  background: #d05e61;
+}
+
+.card-box .card__element--fifth {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: fifth;
+  background: #ce5457;
+}
+
+.card-box .card__element--sixth {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: sixth;
+  background: #cb4b4d;
+}
+
+.card-box .card__element--seventh {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: seventh;
+  background: #c84144;
+}
+
+.card-box .card__element--eighth {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: eighth;
+  background: #c3393c;
+}
+
+.card-box .card__element--ninth {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: ninth;
+  background: #b93639;
+}
+/*# sourceMappingURL=main.css.map */

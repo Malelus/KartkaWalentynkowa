@@ -1,0 +1,40 @@
+//===========================================//
+//===// Brakepoint (Responsive layouts) //===//
+//===========================================//
+
+$brake: (
+  'mobile': 700px,
+  'desktop': 1000px,
+);
+
+//=================//
+//===// Fonts //===//
+//=================//
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$font: (
+  'txt': (
+    'Montserrat',
+    sans-serif,
+  ),
+);
+
+//==================//
+//===// Colors //===//
+//==================//
+
+$color: (
+  'txt': #2e2a2f,
+  'bg': lighten(#d97c7e, 2.5%),
+  'accent': darken(#d97c7e, 20%),
+  'one': #d97c7e,
+  'two': darken(#d97c7e, 2.5%),
+  'three': darken(#d97c7e, 5%),
+  'four': darken(#d97c7e, 7.5%),
+  'five': darken(#d97c7e, 10%),
+  'six': darken(#d97c7e, 12.5%),
+  'seven': darken(#d97c7e, 15%),
+  'eight': darken(#d97c7e, 17.5%),
+  'nine': darken(#d97c7e, 20%),
+);

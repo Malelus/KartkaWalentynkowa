@@ -1,0 +1,161 @@
+//=================================================================================//
+//===// Importing page default styling reset, variables, assets & transitions //===//
+//=================================================================================//
+
+@import './reset', './functions', './variables';
+
+//====================================================//
+//===// Setting default page styling & scrollbar //===//
+//====================================================//
+
+body {
+  background: color(bg);
+  color: color(txt);
+  font-family: font(txt);
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: color(bg);
+    margin: 0.08rem 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: color(accent);
+    border: 3.25px solid color(bg);
+    border-radius: 100px;
+  }
+}
+
+header {
+  padding: 2em 0;
+}
+
+.logo {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  // transform: translateY(-100px);
+  animation: logo-anim 2s ease;
+}
+
+main {
+  margin: 1em 0;
+}
+
+.card-box {
+  display: grid;
+  justify-content: center;
+  place-items: center;
+
+  .card {
+    display: grid;
+    gap: 0.5em;
+    grid-template: repeat(5, 150px) / repeat(5, 150px);
+    grid-template-areas:
+      'first first first first second'
+      'fourth fifth fifth sixth second'
+      'fourth eighth ninth sixth second'
+      'fourth eighth seventh seventh second'
+      'fourth third third third third';
+
+    &__element {
+      position: relative;
+
+      &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      &__icon {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      &--ver {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+      }
+
+      &--first {
+        grid-area: first;
+        background: color(one);
+      }
+
+      &--second {
+        grid-area: second;
+        background: color(two);
+      }
+
+      &--third {
+        grid-area: third;
+        background: color(three);
+      }
+
+      &--fourth {
+        grid-area: fourth;
+        background: color(four);
+      }
+
+      &--fifth {
+        grid-area: fifth;
+        background: color(five);
+      }
+
+      &--sixth {
+        grid-area: sixth;
+        background: color(six);
+      }
+
+      &--seventh {
+        grid-area: seventh;
+        background: color(seven);
+      }
+
+      &--eighth {
+        grid-area: eighth;
+        background: color(eight);
+      }
+
+      &--ninth {
+        grid-area: ninth;
+        background: color(nine);
+      }
+    }
+  }
+}
+
+//====================//
+//===// Reusable //===//
+//====================//
+
+//==================//
+//===// Header //===//
+//==================//
+
+//================//
+//===// Main //===//
+//================//
+
+//==================//
+//===// Footer //===//
+//==================//
+
+//==========================================================//
+//===// Importing responisve layout (mobile & desktop) //===//
+//==========================================================//
+
+// @import './mobile', './desktop';
