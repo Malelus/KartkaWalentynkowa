@@ -50,23 +50,25 @@ header {
     letter-spacing: 0.15em;
     transform: translateY(-100px);
     animation: logo-text-anim 0.8s ease forwards;
-    padding: 0 0.1em;
+    padding: 0 0.25em;
   }
 
   &__icon {
     position: relative;
     opacity: 0;
-    font-size: 1.25rem;
     color: color(accent);
+    --heart-logo-size: 1.25rem;
 
     &:first-of-type {
       transform: translateX(30px);
-      animation: logo-icon-anim-left 0.6s 0.7s ease forwards;
+      animation: logo-icon-anim-left 0.6s 0.7s ease forwards,
+        heart-beat-logo 0.6s 0.8s ease infinite;
     }
 
     &:last-of-type {
       transform: translateX(-30px);
-      animation: logo-icon-anim-right 0.6s 0.7s ease forwards;
+      animation: logo-icon-anim-right 0.6s 0.7s ease forwards,
+        heart-beat-logo 0.6s 0.8s ease infinite;
     }
   }
 }

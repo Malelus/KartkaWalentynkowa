@@ -55,3 +55,14 @@
     font-size: calc(var(--heart-size) * 1.05);
   }
 }
+
+@keyframes heart-beat-logo {
+  0%,
+  100% {
+    font-size: var(--heart-logo-size);
+  }
+
+  50% {
+    font-size: calc(var(--heart-logo-size) * 1.05);
+  }
+}
