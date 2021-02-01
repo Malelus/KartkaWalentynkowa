@@ -199,9 +199,9 @@ header {
   display: -ms-grid;
   display: grid;
   gap: 0.5em;
-  -ms-grid-rows: (150px)[5];
-  -ms-grid-columns: (150px)[5];
-      grid-template: repeat(5, 150px)/repeat(5, 150px);
+  -ms-grid-rows: (70px)[5];
+  -ms-grid-columns: (70px)[5];
+      grid-template: repeat(5, 70px)/repeat(5, 70px);
       grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
 }
 
@@ -215,7 +215,7 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -226,7 +226,7 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 

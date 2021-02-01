@@ -74,7 +74,7 @@ header {
   .card {
     display: grid;
     gap: 0.5em;
-    grid-template: repeat(5, 150px) / repeat(5, 150px);
+    grid-template: repeat(5, 70px) / repeat(5, 70px);
     grid-template-areas:
       'first first first first second'
       'fourth fifth fifth sixth second'
@@ -90,7 +90,7 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.5rem;
+        font-size: 0.75rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
       }
@@ -100,7 +100,7 @@ header {
         top: 80%;
         left: 50%;
         transform: translate(-50%, -80%);
-        font-size: 1.5rem;
+        font-size: 0.8rem;
         text-transform: uppercase;
       }
 
