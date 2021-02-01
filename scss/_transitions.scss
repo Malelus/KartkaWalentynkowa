@@ -44,3 +44,14 @@
     transform: translateX(0px);
   }
 }
+
+@keyframes heart-beat {
+  0%,
+  100% {
+    font-size: var(--heart-size);
+  }
+
+  50% {
+    font-size: calc(var(--heart-size) * 1.05);
+  }
+}

@@ -1,0 +1,49 @@
+//==============================================//
+//===// Responsive layout - mobile section //===//
+//==============================================//
+
+@include mobile {
+  //==================//
+  //===// Header //===//
+  //==================//
+
+  //===// Header > Logo //===//
+
+  .logo {
+    &__text {
+      font-size: 2rem;
+    }
+
+    &__icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  //================//
+  //===// Main //===//
+  //================//
+
+  .card-box {
+    .card {
+      display: grid;
+      gap: 0.5em;
+      grid-template: repeat(5, 100px) / repeat(5, 100px);
+      grid-template-areas:
+        'first first first first second'
+        'fourth fifth fifth sixth second'
+        'fourth eighth ninth sixth second'
+        'fourth eighth seventh seventh second'
+        'fourth third third third third';
+
+      &__element {
+        &__text {
+          font-size: 1rem;
+        }
+
+        &__icon {
+          --heart-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

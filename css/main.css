@@ -122,6 +122,26 @@ html {
   }
 }
 
+@-webkit-keyframes heart-beat {
+  0%,
+  100% {
+    font-size: var(--heart-size);
+  }
+  50% {
+    font-size: calc(var(--heart-size) * 1.05);
+  }
+}
+
+@keyframes heart-beat {
+  0%,
+  100% {
+    font-size: var(--heart-size);
+  }
+  50% {
+    font-size: calc(var(--heart-size) * 1.05);
+  }
+}
+
 body {
   background: #dc8688;
   color: #2e2a2f;
@@ -149,15 +169,14 @@ header {
 
 .logo {
   text-align: center;
-  position: relative;
 }
 
 .logo__text {
-  position: relative;
-  font-size: 2.5rem;
-  letter-spacing: 0.15em;
   display: inline-block;
+  position: relative;
   opacity: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   -webkit-animation: logo-text-anim 0.8s ease forwards;
@@ -167,8 +186,8 @@ header {
 
 .logo__icon {
   position: relative;
-  font-size: 2rem;
   opacity: 0;
+  font-size: 1.25rem;
   color: #b93639;
 }
 
@@ -224,10 +243,12 @@ header {
   position: absolute;
   top: 80%;
   left: 50%;
+  --heart-size: 0.9rem;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  font-size: 0.8rem;
   text-transform: uppercase;
+  -webkit-animation: heart-beat 0.6s ease infinite;
+          animation: heart-beat 0.6s ease infinite;
 }
 
 .card-box .card__element--ver {
@@ -306,5 +327,53 @@ header {
   -ms-grid-column: 3;
   grid-area: ninth;
   background: #b93639;
+}
+
+@media screen and (min-width: 700px) {
+  .logo__text {
+    font-size: 2rem;
+  }
+  .logo__icon {
+    font-size: 1.5rem;
+  }
+  .card-box .card {
+    display: -ms-grid;
+    display: grid;
+    gap: 0.5em;
+    -ms-grid-rows: (100px)[5];
+    -ms-grid-columns: (100px)[5];
+        grid-template: repeat(5, 100px)/repeat(5, 100px);
+        grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
+  }
+  .card-box .card__element__text {
+    font-size: 1rem;
+  }
+  .card-box .card__element__icon {
+    --heart-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .logo__text {
+    font-size: 2.5rem;
+  }
+  .logo__icon {
+    font-size: 2rem;
+  }
+  .card-box .card {
+    display: -ms-grid;
+    display: grid;
+    gap: 0.5em;
+    -ms-grid-rows: (150px)[5];
+    -ms-grid-columns: (150px)[5];
+        grid-template: repeat(5, 150px)/repeat(5, 150px);
+        grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
+  }
+  .card-box .card__element__text {
+    font-size: 1.5rem;
+  }
+  .card-box .card__element__icon {
+    --heart-size: 1.75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
