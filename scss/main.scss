@@ -2,7 +2,7 @@
 //===// Importing page default styling reset, variables, assets & transitions //===//
 //=================================================================================//
 
-@import './reset', './functions', './variables';
+@import './reset', './functions', './variables', './transitions';
 
 //====================================================//
 //===// Setting default page styling & scrollbar //===//
@@ -34,17 +34,36 @@ header {
 }
 
 .logo {
-  position: relative;
   text-align: center;
-  font-size: 2.5rem;
-  letter-spacing: 0.15em;
-  opacity: 0;
-  // transform: translateY(-100px);
-  animation: logo-anim 2s ease;
-}
+  position: relative;
 
-main {
-  margin: 1em 0;
+  &__text {
+    position: relative;
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: logo-text-anim 0.8s ease forwards;
+    padding: 0 0.1em;
+  }
+
+  &__icon {
+    position: relative;
+    font-size: 2rem;
+    opacity: 0;
+    color: color(accent);
+
+    &:first-of-type {
+      transform: translateX(30px);
+      animation: logo-icon-anim-left 0.6s 0.7s ease forwards;
+    }
+
+    &:last-of-type {
+      transform: translateX(-30px);
+      animation: logo-icon-anim-right 0.6s 0.7s ease forwards;
+    }
+  }
 }
 
 .card-box {

@@ -41,14 +41,3 @@
 @function time($timing-name) {
   @return map-get($time, $timing-name);
 }
-
-//=======================//
-//===// Mouse hover //===//
-//======================//
-
-@mixin mouse-hover {
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-}
