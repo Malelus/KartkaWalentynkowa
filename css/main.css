@@ -122,7 +122,7 @@ html {
   }
 }
 
-@-webkit-keyframes heart-beat {
+@-webkit-keyframes heart-beat-card {
   0%,
   100% {
     font-size: var(--heart-size);
@@ -132,7 +132,7 @@ html {
   }
 }
 
-@keyframes heart-beat {
+@keyframes heart-beat-card {
   0%,
   100% {
     font-size: var(--heart-size);
@@ -252,11 +252,11 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .card-box .card__element__icon {
@@ -264,11 +264,11 @@ header {
   top: 80%;
   left: 50%;
   --heart-size: 0.9rem;
+  text-transform: uppercase;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  text-transform: uppercase;
-  -webkit-animation: heart-beat 0.6s ease infinite;
-          animation: heart-beat 0.6s ease infinite;
+  -webkit-animation: heart-beat-card 0.6s ease infinite;
+          animation: heart-beat-card 0.6s ease infinite;
 }
 
 .card-box .card__element--ver {
@@ -276,6 +276,13 @@ header {
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   text-orientation: upright;
+}
+
+.card-box .card__element--hor {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  text-orientation: sideways;
 }
 
 .card-box .card__element--first {
