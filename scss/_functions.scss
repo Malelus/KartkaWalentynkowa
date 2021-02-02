@@ -41,3 +41,31 @@
 @function time($timing-name) {
   @return map-get($time, $timing-name);
 }
+
+//==================//
+//===// Mixins //===//
+//==================//
+
+//===============================//
+//===// Grid Template Areas //===//
+//===============================//
+
+@mixin grid-template-areas {
+  grid-template-areas:
+    'first first first first second'
+    'fourth fifth fifth sixth second'
+    'fourth eighth ninth sixth second'
+    'fourth eighth seventh seventh second'
+    'fourth third third third third';
+}
+
+//=======================//
+//===// Mouse hover //===//
+//======================//
+
+@mixin mouse-hover {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

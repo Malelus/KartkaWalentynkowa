@@ -28,12 +28,7 @@
       display: grid;
       gap: 0.5em;
       grid-template: repeat(5, 100px) / repeat(5, 100px);
-      grid-template-areas:
-        'first first first first second'
-        'fourth fifth fifth sixth second'
-        'fourth eighth ninth sixth second'
-        'fourth eighth seventh seventh second'
-        'fourth third third third third';
+      @include grid-template-areas;
 
       &__element {
         &__text {
