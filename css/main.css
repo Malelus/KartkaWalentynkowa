@@ -36,7 +36,7 @@ html {
   --btn-anim-time: 0.4s;
   --logo-anim-time: 0.8s;
   --heart-show: 0.6s;
-  --heart-beat: 1.2s;
+  --heart-beat: 0.6s;
   --anim-delay: 0.8s;
 }
 
@@ -221,15 +221,15 @@ header {
 .logo__icon:first-of-type {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
-  -webkit-animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
-          animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
+  -webkit-animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
+          animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
 }
 
 .logo__icon:last-of-type {
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
-  -webkit-animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
-          animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
+  -webkit-animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
+          animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
 }
 
 .card-box {
@@ -245,10 +245,10 @@ header {
   display: -ms-grid;
   display: grid;
   gap: 0.5em;
-  -ms-grid-rows: (70px)[5];
-  -ms-grid-columns: (70px)[5];
-      grid-template: repeat(5, 70px)/repeat(5, 70px);
-      grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
+  -ms-grid-rows: (120px)[3];
+  -ms-grid-columns: (120px)[3];
+      grid-template: repeat(3, 120px)/repeat(3, 120px);
+      grid-template-areas: 'first second third' 'eighth ninth fourth' 'seventh sixth fifth';
 }
 
 .card-box .card__element {
@@ -274,15 +274,15 @@ header {
   text-transform: uppercase;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  -webkit-animation: heart-beat-card 1.2s ease infinite;
-          animation: heart-beat-card 1.2s ease infinite;
+  -webkit-animation: heart-beat-card 0.6s ease infinite;
+          animation: heart-beat-card 0.6s ease infinite;
 }
 
 .card-box .card__element--ver {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  text-orientation: upright;
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  text-orientation: sideways;
 }
 
 .card-box .card__element--hor {
@@ -295,70 +295,62 @@ header {
 .card-box .card__element--first {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: first;
   background: #d97c7e;
 }
 
 .card-box .card__element--second {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 5;
+  -ms-grid-column: 2;
   grid-area: second;
   background: #d67274;
 }
 
 .card-box .card__element--third {
-  -ms-grid-row: 5;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: third;
   background: #d3686b;
 }
 
 .card-box .card__element--fourth {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 1;
+  -ms-grid-column: 3;
   grid-area: fourth;
   background: #d05e61;
 }
 
 .card-box .card__element--fifth {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: fifth;
   background: #ce5457;
 }
 
 .card-box .card__element--sixth {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: sixth;
   background: #cb4b4d;
 }
 
 .card-box .card__element--seventh {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: seventh;
   background: #c84144;
 }
 
 .card-box .card__element--eighth {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: eighth;
   background: #c3393c;
 }
 
 .card-box .card__element--ninth {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: ninth;
   background: #b93639;
 }
@@ -421,6 +413,12 @@ footer {
   }
   .card-box .card__element__icon {
     --heart-size: 1.5rem;
+  }
+  .card-box .card__element--ver {
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    text-orientation: upright;
   }
   .footer__link--icon {
     font-size: 2rem;

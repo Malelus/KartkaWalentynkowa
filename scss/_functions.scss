@@ -59,6 +59,13 @@
     'fourth third third third third';
 }
 
+@mixin grid-template-areas-small {
+  grid-template-areas:
+    'first second third'
+    'eighth ninth fourth'
+    'seventh sixth fifth';
+}
+
 //=======================//
 //===// Mouse hover //===//
 //======================//

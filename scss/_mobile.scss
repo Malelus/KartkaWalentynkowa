@@ -38,6 +38,11 @@
         &__icon {
           --heart-size: 1.5rem;
         }
+
+        &--ver {
+          writing-mode: vertical-lr;
+          text-orientation: upright;
+        }
       }
     }
   }

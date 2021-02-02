@@ -3,7 +3,7 @@ window.onload = () => {
   //===// Loading classes //===//
   //===========================//
 
-  // To do something
+  // Empty
 
   //=============================//
   //===// Loading variables //===//
@@ -67,7 +67,7 @@ window.onload = () => {
   //====// Console //===//
   //====================//
 
-  // Console log animation status & transitions durations & delays
+  // Console log animation status & animations durations & delays
 
   consoleInit();
 

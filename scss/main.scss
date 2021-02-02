@@ -84,9 +84,9 @@ header {
   .card {
     display: grid;
     gap: 0.5em;
-    grid-template: repeat(5, 70px) / repeat(5, 70px);
+    grid-template: repeat(3, 120px) / repeat(3, 120px);
 
-    @include grid-template-areas;
+    @include grid-template-areas-small;
 
     &__element {
       position: relative;
@@ -112,8 +112,8 @@ header {
       }
 
       &--ver {
-        writing-mode: vertical-lr;
-        text-orientation: upright;
+        writing-mode: horizontal-tb;
+        text-orientation: sideways;
       }
 
       &--hor {
