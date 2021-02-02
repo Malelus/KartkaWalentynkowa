@@ -32,6 +32,14 @@ html {
   }
 }
 
+:root {
+  --btn-anim-time: 0.4s;
+  --logo-anim-time: 0.8s;
+  --heart-show: 0.6s;
+  --heart-beat: 1.2s;
+  --anim-delay: 0.8s;
+}
+
 @-webkit-keyframes logo-text-anim {
   0% {
     opacity: 0;
@@ -213,15 +221,15 @@ header {
 .logo__icon:first-of-type {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
-  -webkit-animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
-          animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
+  -webkit-animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
+          animation: logo-icon-anim-left 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
 }
 
 .logo__icon:last-of-type {
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
-  -webkit-animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
-          animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 0.6s ease infinite;
+  -webkit-animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
+          animation: logo-icon-anim-right 0.6s 0.8s ease forwards, heart-beat-logo 1.2s ease infinite;
 }
 
 .card-box {
@@ -266,8 +274,8 @@ header {
   text-transform: uppercase;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  -webkit-animation: heart-beat-card 0.6s ease infinite;
-          animation: heart-beat-card 0.6s ease infinite;
+  -webkit-animation: heart-beat-card 1.2s ease infinite;
+          animation: heart-beat-card 1.2s ease infinite;
 }
 
 .card-box .card__element--ver {

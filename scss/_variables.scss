@@ -47,6 +47,18 @@ $time: (
   /*0.4s*/ 'btn-anim-time': 0.4s,
   /*0.8s*/ 'logo-anim-time': 0.8s,
   /*0.6s*/ 'heart-show': 0.6s,
-  /*0.6s*/ 'heart-beat': 0.6s,
+  /*1.2s*/ 'heart-beat': 1.2s,
   /*0.8s*/ 'anim-delay': 0.8s
 );
+
+//======================================//
+//===// Exporting variables for js //===//
+//======================================//
+
+:root {
+  --btn-anim-time: #{time(btn-anim-time)};
+  --logo-anim-time: #{time(logo-anim-time)};
+  --heart-show: #{time(heart-show)};
+  --heart-beat: #{time(heart-beat)};
+  --anim-delay: #{time(anim-delay)};
+}
