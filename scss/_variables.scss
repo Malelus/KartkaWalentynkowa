@@ -26,17 +26,17 @@ $font: (
 
 $color: (
   'txt': #2e2a2f,
-  'bg': lighten(#d97c7e, 2.5%),
-  'accent': darken(#d97c7e, 20%),
-  'one': #d97c7e,
-  'two': darken(#d97c7e, 2.5%),
-  'three': darken(#d97c7e, 5%),
-  'four': darken(#d97c7e, 7.5%),
-  'five': darken(#d97c7e, 10%),
-  'six': darken(#d97c7e, 12.5%),
-  'seven': darken(#d97c7e, 15%),
-  'eight': darken(#d97c7e, 17.5%),
-  'nine': darken(#d97c7e, 20%),
+  'bg': #dc8688,
+  'first': #d97c7e,
+  'second': #d67274,
+  'third': #d3686b,
+  'fourth': #d05e61,
+  'fifth': #ce5457,
+  'sixth': #cb4b4d,
+  'seventh': #c84144,
+  'eighth': #c3393c,
+  'ninth': #b93639,
+  'accent': #b93639,
 );
 
 //===================//
@@ -45,10 +45,12 @@ $color: (
 
 $time: (
   /*0.4s*/ 'btn-anim-time': 0.4s,
-  /*0.8s*/ 'logo-anim-time': 0.8s,
+  /*0.5s*/ 'transition-time': 0.5s,
+  /*0.8s*/ 'logo-anim-time': 0.6s,
   /*0.6s*/ 'heart-show': 0.6s,
   /*1.2s*/ 'heart-beat': 0.6s,
-  /*0.8s*/ 'anim-delay': 0.8s
+  /*0.8s*/ 'anim-delay': 1.2s,
+  /*0.5s*/ 'all-anim-delay': 0.6s
 );
 
 //======================================//
@@ -57,8 +59,10 @@ $time: (
 
 :root {
   --btn-anim-time: #{time(btn-anim-time)};
+  --transition-time: #{time(transition-time)};
   --logo-anim-time: #{time(logo-anim-time)};
   --heart-show: #{time(heart-show)};
   --heart-beat: #{time(heart-beat)};
   --anim-delay: #{time(anim-delay)};
+  --all-anim-delay: #{time(all-anim-delay)};
 }

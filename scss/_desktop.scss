@@ -11,11 +11,11 @@
 
   .logo {
     &__text {
-      font-size: 2.5rem;
+      font-size: 2.35rem;
     }
 
     &__icon {
-      --heart-logo-size: 2rem;
+      font-size: 2.35rem;
     }
   }
 
@@ -23,21 +23,32 @@
   //===// Main //===//
   //================//
 
-  .card-box {
-    .card {
-      display: grid;
-      gap: 0.5em;
-      grid-template: repeat(5, 150px) / repeat(5, 150px);
-      @include grid-template-areas;
+  //===// Main > Card //===//
 
-      &__element {
-        &__text {
-          font-size: 1.5rem;
+  .card {
+    display: grid;
+    gap: 0.5em;
+    grid-template: repeat(5, 150px) / repeat(5, 150px);
+
+    @include template;
+
+    &__type {
+      &--text {
+        &--outer {
+          font-size: 2.31rem;
         }
 
-        &__icon {
-          --heart-size: 1.75rem;
+        &--inner {
+          font-size: 1.934625rem;
         }
+
+        &--center {
+          font-size: 1.55925rem;
+        }
+      }
+
+      &--icon {
+        font-size: 2.35rem;
       }
     }
   }
@@ -49,13 +60,15 @@
   //===// Footer > Content //===//
 
   .footer {
+    margin: 0 0 0.7rem 0.7rem;
+
     &__link {
       &--icon {
-        font-size: 2.25rem;
+        font-size: 2.65rem;
       }
 
       &--text {
-        font-size: 1.75rem;
+        font-size: 2.15rem;
       }
     }
   }

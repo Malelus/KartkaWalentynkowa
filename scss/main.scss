@@ -34,40 +34,43 @@ body {
 //==================//
 
 header {
-  padding: 2em 0;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 //===// Header > Logo //===//
 
 .logo {
-  text-align: center;
-
   &__text {
+    display: inline-block;
     position: relative;
+    z-index: 2;
     opacity: 0;
-    font-size: 1.5rem;
-    letter-spacing: 0.15em;
-    transform: translateY(-100px);
-    animation: logo-text-anim time(logo-anim-time) ease forwards;
-    padding: 0 0.25em;
+    font-size: 1.65rem;
+    animation: logo-text-anim time(logo-anim-time) time(all-anim-delay) ease forwards;
   }
 
   &__icon {
+    display: inline-block;
     position: relative;
+    z-index: 1;
     opacity: 0;
+    font-size: 1.65rem;
     color: color(accent);
-    --heart-logo-size: 1.25rem;
+    transform: translate(0, 0) scale(1, 1);
 
     &:first-of-type {
-      transform: translateX(30px);
-      animation: logo-icon-anim-left time(heart-show) time(anim-delay) ease forwards,
-        heart-beat-logo time(heart-beat) ease infinite;
+      margin-right: 0.15em;
+      animation: logo-icon-anim-left time(logo-anim-time) (time(heart-show) + time(all-anim-delay))
+          ease forwards,
+        heart-beat-logo time(heart-beat) (time(anim-delay) + time(all-anim-delay)) ease infinite;
     }
 
     &:last-of-type {
-      transform: translateX(-30px);
-      animation: logo-icon-anim-right time(heart-show) time(anim-delay) ease forwards,
-        heart-beat-logo time(heart-beat) ease infinite;
+      margin-left: 0.15em;
+      animation: logo-icon-anim-right time(logo-anim-time) (time(heart-show) + time(all-anim-delay))
+          ease forwards,
+        heart-beat-logo time(heart-beat) (time(anim-delay) + time(all-anim-delay)) ease infinite;
     }
   }
 }
@@ -76,95 +79,110 @@ header {
 //===// Main //===//
 //================//
 
-.card-box {
+main {
   display: grid;
   justify-content: center;
-  place-items: center;
+  align-items: center;
+  margin: 2rem 0;
+}
 
-  .card {
-    display: grid;
-    gap: 0.5em;
-    grid-template: repeat(3, 120px) / repeat(3, 120px);
+//===// Main > Card //===//
 
-    @include grid-template-areas-small;
+.card {
+  display: grid;
+  gap: 0.35em;
+  grid-template: repeat(5, 65px) / repeat(5, 65px);
 
-    &__element {
-      position: relative;
+  @include template;
 
-      &__text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        transform: translate(-50%, -50%);
+  &__type {
+    &--text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
+
+      &--outer {
+        font-size: 1rem;
       }
 
-      &__icon {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        --heart-size: 0.9rem;
-        text-transform: uppercase;
-        transform: translate(-50%, -80%);
-        animation: heart-beat-card time(heart-beat) ease infinite;
+      &--inner {
+        font-size: 0.8375rem;
       }
 
-      &--ver {
-        writing-mode: horizontal-tb;
-        text-orientation: sideways;
+      &--center {
+        font-size: 0.675rem;
       }
+    }
 
-      &--hor {
-        writing-mode: horizontal-tb;
-        text-orientation: sideways;
-      }
+    &--hor {
+      writing-mode: horizontal-tb;
+      text-orientation: sideways;
+    }
 
-      &--first {
-        grid-area: first;
-        background: color(one);
-      }
+    &--ver {
+      writing-mode: vertical-lr;
+      text-orientation: sideways;
+    }
 
-      &--second {
-        grid-area: second;
-        background: color(two);
-      }
+    &--icon {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      font-size: 0.925rem;
+      transform: translate(-50%, -60%) scale(1, 1);
+      animation: heart-beat-card time(heart-beat) time(all-anim-delay) ease infinite;
+    }
+  }
 
-      &--third {
-        grid-area: third;
-        background: color(three);
-      }
+  &__element {
+    position: relative;
 
-      &--fourth {
-        grid-area: fourth;
-        background: color(four);
-      }
+    &--first {
+      grid-area: first;
+      background: color(first);
+    }
 
-      &--fifth {
-        grid-area: fifth;
-        background: color(five);
-      }
+    &--second {
+      grid-area: second;
+      background: color(second);
+    }
 
-      &--sixth {
-        grid-area: sixth;
-        background: color(six);
-      }
+    &--third {
+      grid-area: third;
+      background: color(third);
+    }
 
-      &--seventh {
-        grid-area: seventh;
-        background: color(seven);
-      }
+    &--fourth {
+      grid-area: fourth;
+      background: color(fourth);
+    }
 
-      &--eighth {
-        grid-area: eighth;
-        background: color(eight);
-      }
+    &--fifth {
+      grid-area: fifth;
+      background: color(fifth);
+    }
 
-      &--ninth {
-        grid-area: ninth;
-        background: color(nine);
-      }
+    &--sixth {
+      grid-area: sixth;
+      background: color(sixth);
+    }
+
+    &--seventh {
+      grid-area: seventh;
+      background: color(seventh);
+    }
+
+    &--eighth {
+      grid-area: eighth;
+      background: color(eighth);
+    }
+
+    &--ninth {
+      grid-area: ninth;
+      background: color(ninth);
     }
   }
 }
@@ -177,28 +195,30 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  margin: 0.5rem;
 }
 
 //===// Footer > Content //===//
 
 .footer {
+  margin: 0 0 0.5rem 0.5rem;
+
   &__link {
     color: color(accent);
     text-decoration: none;
 
+    @include mouse-hover;
+
     &--icon {
       background: color(bg);
       border-radius: 50%;
-      font-size: 1.75rem;
+      font-size: 2.25rem;
+      margin-right: 0.0625em;
     }
 
     &--text {
       opacity: 0;
       pointer-events: none;
-      background: transparent;
-      font-size: 1.25rem;
-      margin-left: 0.2em;
+      font-size: 1.75rem;
       transition: opacity time(btn-anim-time) ease;
     }
 
@@ -206,8 +226,6 @@ footer {
       opacity: 1;
       pointer-events: all;
     }
-
-    @include mouse-hover;
   }
 }
 
