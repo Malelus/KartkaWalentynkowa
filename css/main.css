@@ -34,7 +34,7 @@ html {
 
 :root {
   --btn-anim-time: 0.4s;
-  --transition-time: 0.5s;
+  --transition-time: 1.5s;
   --logo-anim-time: 0.6s;
   --heart-show: 0.6s;
   --heart-beat: 0.6s;
@@ -183,8 +183,8 @@ html {
   background: linear-gradient(bottom left, #dc8688, #b93639);
   -webkit-clip-path: polygon(0 48%, 52% 48%, 52% 100%, 0 100%);
           clip-path: polygon(0 48%, 52% 48%, 52% 100%, 0 100%);
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
+  -webkit-transition: 1.5s ease-out;
+  transition: 1.5s ease-out;
 }
 
 .slide-tr-bl.transition--active-tr-bl {
@@ -203,8 +203,8 @@ html {
   background: linear-gradient(bottom right, #dc8688, #b93639);
   -webkit-clip-path: polygon(48% 48%, 100% 48%, 100% 100%, 48% 100%);
           clip-path: polygon(48% 48%, 100% 48%, 100% 100%, 48% 100%);
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
+  -webkit-transition: 1.5s ease-out;
+  transition: 1.5s ease-out;
 }
 
 .slide-tl-br.transition--active-tl-br {
@@ -223,8 +223,8 @@ html {
   background: linear-gradient(top left, #dc8688, #b93639);
   -webkit-clip-path: polygon(0 0, 52% 0, 52% 52%, 0 52%);
           clip-path: polygon(0 0, 52% 0, 52% 52%, 0 52%);
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
+  -webkit-transition: 1.5s ease-out;
+  transition: 1.5s ease-out;
 }
 
 .slide-br-tl.transition--active-br-tl {
@@ -243,8 +243,8 @@ html {
   background: linear-gradient(top right, #dc8688, #b93639);
   -webkit-clip-path: polygon(48% 0, 100% 0, 100% 52%, 48% 52%);
           clip-path: polygon(48% 0, 100% 0, 100% 52%, 48% 52%);
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
+  -webkit-transition: 1.5s ease-out;
+  transition: 1.5s ease-out;
 }
 
 .slide-bl-tr.transition--active-bl-tr {
