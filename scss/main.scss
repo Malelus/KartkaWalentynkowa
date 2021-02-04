@@ -86,48 +86,32 @@ main {
   margin: 2rem 0;
 }
 
-//===// Main > Card //===//
+//===// Main > Card-grid //===//
 
-.card {
+.card-grid {
   display: grid;
   gap: 0.35em;
   grid-template: repeat(5, 65px) / repeat(5, 65px);
 
   @include template;
+}
 
-  &__type {
-    &--text {
+//===// Main > Card //===//
+
+.card {
+  position: relative;
+
+  &__kind {
+    &-text {
       position: absolute;
       top: 50%;
       left: 50%;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       transform: translate(-50%, -50%);
-
-      &--outer {
-        font-size: 1rem;
-      }
-
-      &--inner {
-        font-size: 0.8375rem;
-      }
-
-      &--center {
-        font-size: 0.675rem;
-      }
     }
 
-    &--hor {
-      writing-mode: horizontal-tb;
-      text-orientation: sideways;
-    }
-
-    &--ver {
-      writing-mode: vertical-lr;
-      text-orientation: sideways;
-    }
-
-    &--icon {
+    &-icon {
       position: absolute;
       top: 80%;
       left: 50%;
@@ -137,53 +121,75 @@ main {
     }
   }
 
-  &__element {
-    position: relative;
-
-    &--first {
-      grid-area: first;
-      background: color(first);
+  &__location {
+    &-outer {
+      font-size: 1rem;
     }
 
-    &--second {
-      grid-area: second;
-      background: color(second);
+    &-inner {
+      font-size: 0.8375rem;
     }
 
-    &--third {
-      grid-area: third;
-      background: color(third);
+    &-center {
+      font-size: 0.675rem;
+    }
+  }
+
+  &__write {
+    &-hor {
+      writing-mode: horizontal-tb;
+      text-orientation: sideways;
     }
 
-    &--fourth {
-      grid-area: fourth;
-      background: color(fourth);
+    &-ver {
+      writing-mode: vertical-lr;
+      text-orientation: sideways;
     }
+  }
 
-    &--fifth {
-      grid-area: fifth;
-      background: color(fifth);
-    }
+  &--first {
+    grid-area: first;
+    background: color(first);
+  }
 
-    &--sixth {
-      grid-area: sixth;
-      background: color(sixth);
-    }
+  &--second {
+    grid-area: second;
+    background: color(second);
+  }
 
-    &--seventh {
-      grid-area: seventh;
-      background: color(seventh);
-    }
+  &--third {
+    grid-area: third;
+    background: color(third);
+  }
 
-    &--eighth {
-      grid-area: eighth;
-      background: color(eighth);
-    }
+  &--fourth {
+    grid-area: fourth;
+    background: color(fourth);
+  }
 
-    &--ninth {
-      grid-area: ninth;
-      background: color(ninth);
-    }
+  &--fifth {
+    grid-area: fifth;
+    background: color(fifth);
+  }
+
+  &--sixth {
+    grid-area: sixth;
+    background: color(sixth);
+  }
+
+  &--seventh {
+    grid-area: seventh;
+    background: color(seventh);
+  }
+
+  &--eighth {
+    grid-area: eighth;
+    background: color(eighth);
+  }
+
+  &--ninth {
+    grid-area: ninth;
+    background: color(ninth);
   }
 }
 

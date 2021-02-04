@@ -36,7 +36,18 @@
 | < 699px                                                                    | 700px - 999px                                                         | > 1000px                                                                      |
 | widok przystowany do korzystania na smartphonie (pierwotny design strony), | widok mobilny, dostosowanie czcionek i animacji do większych ekranów, | widok desktop , dostosowanie czcionek i animacji do komputerów stacjonarnych, |
 
-- użyto znaczników semantycznych.
+- użyto znaczników semantycznych,
+
+- do ułożenia kwadratów użyto display: grid.
+
+- tekst został obrócony używając:
+
+```
+  .card__write-ver {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+  }
+```
 
 #### Wygląd:
 

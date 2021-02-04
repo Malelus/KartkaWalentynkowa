@@ -23,32 +23,36 @@
   //===// Main //===//
   //================//
 
-  //===// Main > Card //===//
+  //===// Main > Card-grid //===//
 
-  .card {
+  .card-grid {
     display: grid;
     gap: 0.5em;
     grid-template: repeat(5, 110px) / repeat(5, 110px);
 
     @include template;
+  }
 
-    &__type {
-      &--text {
-        &--outer {
-          font-size: 1.7rem;
-        }
+  //===// Main > Card //===//
 
-        &--inner {
-          font-size: 1.42375rem;
-        }
+  .card {
+    &__kind {
+      &-icon {
+        font-size: 1.75rem;
+      }
+    }
 
-        &--center {
-          font-size: 1.1475rem;
-        }
+    &__location {
+      &-outer {
+        font-size: 1.7rem;
       }
 
-      &--icon {
-        font-size: 1.75rem;
+      &-inner {
+        font-size: 1.42375rem;
+      }
+
+      &-center {
+        font-size: 1.1475rem;
       }
     }
   }

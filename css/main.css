@@ -323,7 +323,7 @@ main {
   margin: 2rem 0;
 }
 
-.card {
+.card-grid {
   display: -ms-grid;
   display: grid;
   gap: 0.35em;
@@ -333,7 +333,11 @@ main {
       grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
 }
 
-.card__type--text {
+.card {
+  position: relative;
+}
+
+.card__kind-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -343,33 +347,7 @@ main {
           transform: translate(-50%, -50%);
 }
 
-.card__type--text--outer {
-  font-size: 1rem;
-}
-
-.card__type--text--inner {
-  font-size: 0.8375rem;
-}
-
-.card__type--text--center {
-  font-size: 0.675rem;
-}
-
-.card__type--hor {
-  -webkit-writing-mode: horizontal-tb;
-      -ms-writing-mode: lr-tb;
-          writing-mode: horizontal-tb;
-  text-orientation: sideways;
-}
-
-.card__type--ver {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  text-orientation: sideways;
-}
-
-.card__type--icon {
+.card__kind-icon {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -380,11 +358,33 @@ main {
           animation: heart-beat-card 0.6s 0.6s ease infinite;
 }
 
-.card__element {
-  position: relative;
+.card__location-outer {
+  font-size: 1rem;
 }
 
-.card__element--first {
+.card__location-inner {
+  font-size: 0.8375rem;
+}
+
+.card__location-center {
+  font-size: 0.675rem;
+}
+
+.card__write-hor {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  text-orientation: sideways;
+}
+
+.card__write-ver {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: sideways;
+}
+
+.card--first {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -392,7 +392,7 @@ main {
   background: #d97c7e;
 }
 
-.card__element--second {
+.card--second {
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
   -ms-grid-column: 5;
@@ -400,7 +400,7 @@ main {
   background: #d67274;
 }
 
-.card__element--third {
+.card--third {
   -ms-grid-row: 5;
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
@@ -408,7 +408,7 @@ main {
   background: #d3686b;
 }
 
-.card__element--fourth {
+.card--fourth {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
   -ms-grid-column: 1;
@@ -416,7 +416,7 @@ main {
   background: #d05e61;
 }
 
-.card__element--fifth {
+.card--fifth {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
@@ -424,7 +424,7 @@ main {
   background: #ce5457;
 }
 
-.card__element--sixth {
+.card--sixth {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 4;
@@ -432,7 +432,7 @@ main {
   background: #cb4b4d;
 }
 
-.card__element--seventh {
+.card--seventh {
   -ms-grid-row: 4;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
@@ -440,7 +440,7 @@ main {
   background: #c84144;
 }
 
-.card__element--eighth {
+.card--eighth {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -448,7 +448,7 @@ main {
   background: #c3393c;
 }
 
-.card__element--ninth {
+.card--ninth {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: ninth;
@@ -501,7 +501,7 @@ footer {
   .logo__icon {
     font-size: 2rem;
   }
-  .card {
+  .card-grid {
     display: -ms-grid;
     display: grid;
     gap: 0.5em;
@@ -510,17 +510,17 @@ footer {
         grid-template: repeat(5, 110px)/repeat(5, 110px);
         grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
   }
-  .card__type--text--outer {
+  .card__kind-icon {
+    font-size: 1.75rem;
+  }
+  .card__location-outer {
     font-size: 1.7rem;
   }
-  .card__type--text--inner {
+  .card__location-inner {
     font-size: 1.42375rem;
   }
-  .card__type--text--center {
+  .card__location-center {
     font-size: 1.1475rem;
-  }
-  .card__type--icon {
-    font-size: 1.75rem;
   }
   .footer {
     margin: 0 0 0.6rem 0.6rem;
@@ -540,7 +540,7 @@ footer {
   .logo__icon {
     font-size: 2.35rem;
   }
-  .card {
+  .card-grid {
     display: -ms-grid;
     display: grid;
     gap: 0.5em;
@@ -549,17 +549,17 @@ footer {
         grid-template: repeat(5, 150px)/repeat(5, 150px);
         grid-template-areas: 'first first first first second' 'fourth fifth fifth sixth second' 'fourth eighth ninth sixth second' 'fourth eighth seventh seventh second' 'fourth third third third third';
   }
-  .card__type--text--outer {
+  .card__kind-icon {
+    font-size: 2.35rem;
+  }
+  .card__location-outer {
     font-size: 2.31rem;
   }
-  .card__type--text--inner {
+  .card__location-inner {
     font-size: 1.934625rem;
   }
-  .card__type--text--center {
+  .card__location-center {
     font-size: 1.55925rem;
-  }
-  .card__type--icon {
-    font-size: 2.35rem;
   }
   .footer {
     margin: 0 0 0.7rem 0.7rem;
