@@ -37,7 +37,7 @@ $color: (
   'eighth': #c3393c,
   'ninth': #b93639,
   'accent': #b93639,
-  'btn': #cb4b4d,
+  'btn': #d3686b,
 );
 
 //===================//
@@ -45,14 +45,15 @@ $color: (
 //===================//
 
 $time: (
-  /*1.5s*/ 'transition-time': 1.5s,
+  /*0.4s*/ 'transition-static': 0.4s,
+  /*.75s*/ 'transition-time': 0.75s,
   /*0.4s*/ 'popup-time': 0.4s,
   /*0.4s*/ 'btn-anim-time': 0.4s,
-  /*0.8s*/ 'logo-anim-time': 0.6s,
+  /*0.6s*/ 'logo-anim-time': 0.6s,
   /*0.6s*/ 'heart-show': 0.6s,
-  /*1.2s*/ 'heart-beat': 0.6s,
-  /*0.8s*/ 'anim-delay': 1.2s,
-  /*0.5s*/ 'all-anim-delay': 0.6s
+  /*0.6s*/ 'heart-beat': 0.6s,
+  /*1.2s*/ 'anim-delay': 1.2s,
+  /*0.5s*/ 'all-anim-delay': 0.5s
 );
 
 //======================================//
@@ -60,6 +61,7 @@ $time: (
 //======================================//
 
 :root {
+  --transition-static: #{time(transition-static)};
   --transition-time: #{time(transition-time)};
   --popup-time: #{time(popup-time)};
   --btn-anim-time: #{time(btn-anim-time)};

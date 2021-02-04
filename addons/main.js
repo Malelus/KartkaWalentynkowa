@@ -23,6 +23,7 @@ window.onload = () => {
   // Defining variables array
   const durationsArray = [];
   const varArray = [
+    '--transition-static',
     '--transition-time',
     '--popup-time',
     '--btn-anim-time',
@@ -88,16 +89,18 @@ window.onload = () => {
   function consoleLog() {
     console.log(`# Scripts were loaded correctly! (Time is given in seconds)`);
     console.log(`# Animations are ` + motionStatus + `\n\n`);
-    console.log(`# Transition time: ` + durationsArray[0]);
-    console.log(`# Popup time: ` + durationsArray[1]);
-    console.log(`# Button animation time: ` + durationsArray[2]);
-    console.log(`# Logo animation time: ` + durationsArray[3]);
+    console.log(`# Page transition:`);
+    console.log(`  - static screen: ` + durationsArray[0]);
+    console.log(`  - transition: ` + durationsArray[1]);
+    console.log(`# Popup time: ` + durationsArray[2]);
+    console.log(`# Button animation time: ` + durationsArray[3]);
+    console.log(`# Logo animation time: ` + durationsArray[4]);
     console.log(`# Heart animation:`);
-    console.log(`  - show: ` + durationsArray[4]);
-    console.log(`  - beat: ` + durationsArray[5]);
+    console.log(`  - show: ` + durationsArray[5]);
+    console.log(`  - beat: ` + durationsArray[6]);
     console.log(`# Delays:`);
-    console.log(`  - anim: ` + durationsArray[6]);
-    console.log(`  - all: ` + durationsArray[7]);
+    console.log(`  - anim: ` + durationsArray[7]);
+    console.log(`  - all: ` + durationsArray[8]);
   }
 
   //====================//
