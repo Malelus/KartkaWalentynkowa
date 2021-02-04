@@ -1,6 +1,6 @@
 # Strona z kartką walentynkową
 
-> ### [Link do strony](https://malelus.github.io/KartkaWalentynkowa/)
+> ### [Link do strony](https://malelus.github.io/Walentynka/)
 
 ---
 
