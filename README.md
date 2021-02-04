@@ -1,4 +1,4 @@
-# Strona z kartką walentynkową
+# Walentynka
 
 > ### [Link do strony](https://malelus.github.io/Walentynka/)
 
