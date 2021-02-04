@@ -58,22 +58,45 @@
   }
 
   //==================//
-  //===// Footer //===//
+  //===// Assets //===//
   //==================//
 
-  //===// Footer > Content //===//
+  //===// Popup //===//
 
-  .footer {
-    margin: 0 0 0.6rem 0.6rem;
+  .popup {
+    &__title {
+      font-size: 2.1rem;
+
+      &--icon {
+        font-size: 2.1rem;
+      }
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+
+    &__text {
+      font-size: 1.35rem;
+
+      & + & {
+        margin-top: 0.5em;
+      }
+
+      &:last-of-type {
+        margin-bottom: 1.8rem;
+      }
+    }
 
     &__link {
-      &--icon {
-        font-size: 2.45rem;
-      }
+      font-size: 1.175rem;
+      margin-left: 0.25em;
+    }
 
-      &--text {
-        font-size: 1.95rem;
-      }
+    &__circle {
+      top: 55%;
+      font-size: 0.5rem;
+      transform: translateY(-55%);
     }
   }
 }

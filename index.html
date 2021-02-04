@@ -62,15 +62,43 @@
     </main>
 
     <footer class="footer">
-      <a
-        href="https://github.com/Malelus/KartkaWalentynkowa"
-        class="footer__link"
-        target="_blank"
-        title="github.com/Malelus/KartkaWalentynkowa"
-        ><i class="fab fa-github footer__link--icon"></i
-        ><span class="footer__link--text">GitHub</span></a
-      >
+      <button class="btn btn--small btn--about show-popup" data-target="#about_page">
+        <i class="fas fa-info-circle btn btn--info btn--icon"></i> O stronie
+      </button>
     </footer>
+
+    <div class="popup" id="about_page">
+      <div class="popup__overlay show-popup" data-target="#about_page"></div>
+      <div class="popup__inner">
+        <p class="popup__title">
+          <i class="fas fa-heart popup__title--icon"></i>
+          <span class="popup__title">Walentynki</span>
+          <i class="fas fa-heart popup__title--icon"></i>
+        </p>
+        <p class="popup__text">
+          <i class="fas fa-info"></i> - Kartka zrobiona na zbliżające się święto zakochanych.
+        </p>
+        <p class="popup__text">
+          <i class="fab fa-github"></i> - Strona została umieszczona również na repozytorium
+          GitHub'a.<a
+            href="https://github.com/Malelus/KartkaWalentynkowa"
+            class="popup__link"
+            target="_blank"
+            title="github.com/Malelus/KartkaWalentynkowa"
+            ><i class="fas fa-external-link-alt"></i
+          ></a>
+        </p>
+        <p class="popup__subtitle">Autor: Mateusz Narowski</p>
+        <p class="popup__text"><i class="fas fa-circle popup__circle"></i> Klasa: 3Bi</p>
+        <p class="popup__text"><i class="fas fa-circle popup__circle"></i> Grupa: I</p>
+        <p class="popup__text"><i class="far fa-calendar-alt"></i> - 09.02.2021r.</p>
+        <span>
+          <button class="btn btn--big btn--about show-popup" data-target="#about_page">
+            <i class="fas fa-times btn btn--close btn--icon"></i> Zamknij
+          </button>
+        </span>
+      </div>
+    </div>
 
     <script src="./addons/main.js"></script>
   </body>

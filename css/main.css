@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -33,13 +33,175 @@ html {
 }
 
 :root {
-  --btn-anim-time: 0.4s;
   --transition-time: 1.5s;
+  --popup-time: 0.4s;
+  --btn-anim-time: 0.4s;
   --logo-anim-time: 0.6s;
   --heart-show: 0.6s;
   --heart-beat: 0.6s;
   --anim-delay: 1.2s;
   --all-anim-delay: 0.6s;
+}
+
+.btn {
+  position: relative;
+  background: #d3686b;
+  border: none;
+  outline: none;
+  color: #2e2a2f;
+  font-family: "Montserrat", sans-serif;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.btn--small {
+  font-size: 1rem;
+}
+
+.btn--big {
+  font-size: 1.175rem;
+}
+
+.btn--icon {
+  pointer-events: none;
+  font-family: 'Font Awesome 5 Free';
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn--about {
+  font-weight: 400;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+  padding: 0.5em 0.8em;
+}
+
+.btn--about:hover, .btn--about:focus {
+  opacity: 0.8;
+}
+
+.btn--about:hover .btn--info {
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+}
+
+.btn--about:hover .btn--close {
+  -webkit-transform: scale(1.15, 1.15) rotate(180deg);
+          transform: scale(1.15, 1.15) rotate(180deg);
+}
+
+.btn--info, .btn--close {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-right: 0.1em;
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.popup.popup--active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  background: #dc8688;
+  border-radius: 6.5px;
+  padding: 3.5rem 2.2rem;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup__title {
+  color: #2e2a2f;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.225rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.85rem;
+  font-weight: 700;
+}
+
+.popup__title--icon {
+  color: #b93639;
+  font-size: 1.85rem;
+}
+
+.popup__subtitle {
+  color: #2e2a2f;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2.2rem 0 0.8rem 0;
+}
+
+.popup__text {
+  color: #2e2a2f;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.popup__text + .popup__text {
+  margin-top: 0.4em;
+}
+
+.popup__text:last-of-type {
+  margin-bottom: 1.55rem;
+}
+
+.popup__link {
+  color: #2e2a2f;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 0.25em;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.popup__link:hover, .popup__link:focus {
+  opacity: 0.8;
+}
+
+.popup__circle {
+  position: relative;
+  top: 65%;
+  color: #2e2a2f;
+  font-size: 0.25rem;
+  -webkit-transform: translateY(-65%);
+          transform: translateY(-65%);
 }
 
 @-webkit-keyframes logo-text-anim {
@@ -465,35 +627,6 @@ footer {
   margin: 0 0 0.5rem 0.5rem;
 }
 
-.footer__link {
-  color: #b93639;
-  text-decoration: none;
-}
-
-.footer__link:hover, .footer__link:focus {
-  opacity: 0.8;
-}
-
-.footer__link--icon {
-  background: #dc8688;
-  border-radius: 50%;
-  font-size: 2.25rem;
-  margin-right: 0.0625em;
-}
-
-.footer__link--text {
-  opacity: 0;
-  pointer-events: none;
-  font-size: 1.75rem;
-  -webkit-transition: opacity 0.4s ease;
-  transition: opacity 0.4s ease;
-}
-
-.footer__link:hover .footer__link--text {
-  opacity: 1;
-  pointer-events: all;
-}
-
 @media screen and (min-width: 700px) {
   .logo__text {
     font-size: 2rem;
@@ -522,14 +655,33 @@ footer {
   .card__location-center {
     font-size: 1.1475rem;
   }
-  .footer {
-    margin: 0 0 0.6rem 0.6rem;
+  .popup__title {
+    font-size: 2.1rem;
   }
-  .footer__link--icon {
-    font-size: 2.45rem;
+  .popup__title--icon {
+    font-size: 2.1rem;
   }
-  .footer__link--text {
-    font-size: 1.95rem;
+  .popup__subtitle {
+    font-size: 1.5rem;
+  }
+  .popup__text {
+    font-size: 1.35rem;
+  }
+  .popup__text + .popup__text {
+    margin-top: 0.5em;
+  }
+  .popup__text:last-of-type {
+    margin-bottom: 1.8rem;
+  }
+  .popup__link {
+    font-size: 1.175rem;
+    margin-left: 0.25em;
+  }
+  .popup__circle {
+    top: 55%;
+    font-size: 0.5rem;
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
   }
 }
 
@@ -560,15 +712,6 @@ footer {
   }
   .card__location-center {
     font-size: 1.55925rem;
-  }
-  .footer {
-    margin: 0 0 0.7rem 0.7rem;
-  }
-  .footer__link--icon {
-    font-size: 2.65rem;
-  }
-  .footer__link--text {
-    font-size: 2.15rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

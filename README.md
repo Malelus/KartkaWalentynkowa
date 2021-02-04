@@ -40,7 +40,7 @@
 
 - do ułożenia kwadratów użyto display: grid.
 
-- tekst został obrócony używając:
+- pionowy tekst został obrócony używając:
 
 ```
   .card__write-ver {
@@ -49,11 +49,24 @@
   }
 ```
 
+- okno popup umieszczone w stopce strony, zawiera:
+
+  - skrócone informacje o zawartości strony,
+  - link do repozytorium GitHub'a,
+  - informacje o autorze,
+  - datę wykonania,
+
+  - okno można wyłączyć na 3 sposoby:
+
+    - przycisk Zamknij,
+    - kliknięcie poza obszar okna,
+    - za pomocą przycisku ESC.
+
 #### Wygląd:
 
 - animacja wejścia na stronę wykonana przy pomocy CSS oraz JavaScript,
 
-- animowany link do repozytorium GitHub'a w lewym dolnym rogu strony,
+- animowany przycisk 'O stronie' w lewym dolnym rogu strony,
 
 - zmieniony wygląd scrollbar'a.
 

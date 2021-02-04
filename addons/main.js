@@ -9,6 +9,10 @@ window.onload = () => {
   const transitionElementBrTl = document.querySelector('.transition-br-tl');
   const transitionElementBlTr = document.querySelector('.transition-bl-tr');
 
+  // - popup
+  const popupBtn = document.querySelectorAll('.show-popup');
+  const popup = document.querySelector('.popup');
+
   //=============================//
   //===// Loading variables //===//
   //=============================//
@@ -19,8 +23,9 @@ window.onload = () => {
   // Defining variables array
   const durationsArray = [];
   const varArray = [
-    '--btn-anim-time',
     '--transition-time',
+    '--popup-time',
+    '--btn-anim-time',
     '--logo-anim-time',
     '--heart-show',
     '--heart-beat',
@@ -83,15 +88,16 @@ window.onload = () => {
   function consoleLog() {
     console.log(`# Scripts were loaded correctly! (Time is given in seconds)`);
     console.log(`# Animations are ` + motionStatus + `\n\n`);
-    console.log(`# Button animation time: ` + durationsArray[0]);
-    console.log(`# Transition time: ` + durationsArray[1]);
-    console.log(`# Logo animation time: ` + durationsArray[2]);
+    console.log(`# Transition time: ` + durationsArray[0]);
+    console.log(`# Popup time: ` + durationsArray[1]);
+    console.log(`# Button animation time: ` + durationsArray[2]);
+    console.log(`# Logo animation time: ` + durationsArray[3]);
     console.log(`# Heart animation:`);
-    console.log(`  - show: ` + durationsArray[3]);
-    console.log(`  - beat: ` + durationsArray[4]);
+    console.log(`  - show: ` + durationsArray[4]);
+    console.log(`  - beat: ` + durationsArray[5]);
     console.log(`# Delays:`);
-    console.log(`  - anim: ` + durationsArray[5]);
-    console.log(`  - all: ` + durationsArray[6]);
+    console.log(`  - anim: ` + durationsArray[6]);
+    console.log(`  - all: ` + durationsArray[7]);
   }
 
   //====================//
@@ -114,4 +120,26 @@ window.onload = () => {
   setTimeout(() => {
     transitionElementBlTr.classList.remove('transition--active-bl-tr');
   }, timeTransition);
+
+  //===// Popup //===//
+
+  //===// Popup show & close with button //===//
+  popupBtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const popupTarget = e.target.dataset.target;
+
+      const popupElement = document.querySelector(popupTarget);
+      if (popupElement != null) {
+        popupElement.classList.toggle('popup--active');
+      }
+    });
+  });
+
+  //===// Popup close on escape key press //===//
+  document.addEventListener('keydown', esc);
+  function esc(e) {
+    if (e.which === 27) {
+      popup.classList.remove('popup--active');
+    }
+  }
 };

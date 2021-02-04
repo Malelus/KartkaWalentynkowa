@@ -11,7 +11,7 @@ $brake: (
 //===// Fonts //===//
 //=================//
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 $font: (
   'txt': (
@@ -37,6 +37,7 @@ $color: (
   'eighth': #c3393c,
   'ninth': #b93639,
   'accent': #b93639,
+  'btn': #cb4b4d,
 );
 
 //===================//
@@ -44,8 +45,9 @@ $color: (
 //===================//
 
 $time: (
+  /*1.5s*/ 'transition-time': 1.5s,
+  /*0.4s*/ 'popup-time': 0.4s,
   /*0.4s*/ 'btn-anim-time': 0.4s,
-  /*0.5s*/ 'transition-time': 1.5s,
   /*0.8s*/ 'logo-anim-time': 0.6s,
   /*0.6s*/ 'heart-show': 0.6s,
   /*1.2s*/ 'heart-beat': 0.6s,
@@ -58,8 +60,9 @@ $time: (
 //======================================//
 
 :root {
-  --btn-anim-time: #{time(btn-anim-time)};
   --transition-time: #{time(transition-time)};
+  --popup-time: #{time(popup-time)};
+  --btn-anim-time: #{time(btn-anim-time)};
   --logo-anim-time: #{time(logo-anim-time)};
   --heart-show: #{time(heart-show)};
   --heart-beat: #{time(heart-beat)};
