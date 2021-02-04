@@ -45,7 +45,7 @@
 ```
   .card__write-ver {
     writing-mode: vertical-lr;
-    text-orientation: sideways;
+    text-orientation: upright;
   }
 ```
 
