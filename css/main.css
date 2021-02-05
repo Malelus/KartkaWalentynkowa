@@ -117,6 +117,7 @@ html {
   bottom: 0;
   z-index: 999;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
@@ -124,6 +125,7 @@ html {
 
 .popup.popup--active {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
 }
 
