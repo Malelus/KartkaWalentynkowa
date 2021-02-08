@@ -16,12 +16,14 @@
 - układ:
 
   - logo,
-  - zawartość.
+  - zawartość,
+  - stopka.
 
 - animacje:
 
   - logo,
-  - kwadrat z imieniem.
+  - kwadrat z imieniem,
+  - stopka popup.
 
 ---
 

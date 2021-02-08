@@ -13,6 +13,14 @@ html {
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
@@ -54,8 +62,8 @@ html {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .btn--small {
@@ -95,8 +103,10 @@ html {
 }
 
 .btn--info, .btn--close {
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   margin-right: 0.1em;
 }
 
@@ -189,7 +199,6 @@ html {
 
 .popup__link {
   color: #2e2a2f;
-  text-decoration: none;
   font-size: 1rem;
   margin-left: 0.25em;
   -webkit-transition: opacity 0.4s ease;
@@ -508,7 +517,6 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  letter-spacing: 0.15em;
   text-transform: uppercase;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -538,6 +546,7 @@ main {
 }
 
 .card__write-hor {
+  letter-spacing: 0.1em;
   -webkit-writing-mode: horizontal-tb;
       -ms-writing-mode: lr-tb;
           writing-mode: horizontal-tb;
@@ -545,6 +554,7 @@ main {
 }
 
 .card__write-ver {
+  letter-spacing: 0.15em;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
