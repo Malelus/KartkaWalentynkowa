@@ -68,7 +68,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity time(popup-time);
+  transition: opacity time(popup-time), visibility time(popup-time);
 
   &.popup--active {
     opacity: 1;
