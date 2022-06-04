@@ -1,6 +1,6 @@
 # Walentynka
 
-> ### [Link do strony](https://malelus.github.io/Walentynka/)
+> ### [Link do strony](https://malelus.github.io/Project_Walentynka/)
 
 ---
 
